@@ -7,7 +7,7 @@ package org.poj.p4114;
  * which determines if there exists a line such that after projecting these segments on it,
  * all projected segments have at least one point in common.
  * 
-ÑùÀıÊäÈë
+æ ·ä¾‹è¾“å…¥
 3
 2
 1.0 2.0 3.0 4.0
@@ -20,7 +20,7 @@ package org.poj.p4114;
 0.0 0.0 0.0 1.0
 0.0 2.0 0.0 3.0
 1.0 1.0 2.0 1.0
-ÑùÀıÊä³ö
+æ ·ä¾‹è¾“å‡º
 Yes!
 Yes!
 No!
@@ -29,6 +29,7 @@ No!
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+// Wrong Answer
 public class Main {
 
     public static void main(String[] args) {
@@ -51,7 +52,7 @@ public class Main {
                     coordinates[2 * i + 1][1] = Double.parseDouble(segments[i][3]);
                 }
                 
-                boolean havingIntersection = false; // ÓĞ½»µãµÄÖµÎª·ñ
+                boolean havingIntersection = false; // æœ‰äº¤ç‚¹çš„å€¼ä¸ºå¦
                 for (int i = 0; i < coordinates.length; i++) {
                     for (int j = i + 1; j < coordinates.length; j++) {
                         if (i != j) {
@@ -98,9 +99,9 @@ public class Main {
     }
     
     /**
-     * Ïß¶ÎÓëÖ±ÏßµÄ¹ØÏµ£¨ÊÇ·ñÏà½»£©
-     * Ö±Ïß£ºx = b
-     * Ïß¶Î£º(x1, y1) - (x2, y2)
+     * çº¿æ®µä¸ç›´çº¿çš„å…³ç³»ï¼ˆæ˜¯å¦ç›¸äº¤ï¼‰
+     * ç›´çº¿ï¼šx = b
+     * çº¿æ®µï¼š(x1, y1) - (x2, y2)
      */
     private static boolean isIntersection(double x1, double x2, double b) {
         boolean isInter = false;
@@ -110,9 +111,9 @@ public class Main {
     }
     
     /**
-     * Ïß¶ÎÓëÖ±ÏßµÄ¹ØÏµ£¨ÊÇ·ñÏà½»£©
-     * Ö±Ïß£ºy = kx + b
-     * Ïß¶Î£º(x1, y1) - (x2, y2)
+     * çº¿æ®µä¸ç›´çº¿çš„å…³ç³»ï¼ˆæ˜¯å¦ç›¸äº¤ï¼‰
+     * ç›´çº¿ï¼šy = kx + b
+     * çº¿æ®µï¼š(x1, y1) - (x2, y2)
      */
     private static boolean isIntersection(double x1, double y1, double x2, double y2, double k, double b) {
         boolean isInter = false;
@@ -125,7 +126,7 @@ public class Main {
     }
     
     /**
-     * ¼ÆËãÖ±Ïß·½³Ì£¬ÕâÀïÔİÊ±²»¿¼ÂÇĞ±ÂÊ²»´æÔÚµÄÇé¿ö
+     * è®¡ç®—ç›´çº¿æ–¹ç¨‹ï¼Œè¿™é‡Œæš‚æ—¶ä¸è€ƒè™‘æ–œç‡ä¸å­˜åœ¨çš„æƒ…å†µ
      */
     private static double[] getLineKB(double x1, double y1, double x2, double y2) {
         double[] kb = new double[2];

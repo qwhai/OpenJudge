@@ -1,10 +1,10 @@
 package org.poj.p4113;
 
 /**
- * 
- ÌâÄ¿Á´½Ó£ºhttp://bailian.openjudge.cn/practice/4113/ 
-
- ÑùÀıÊäÈë
+ * é¢˜ç›®é“¾æ¥ï¼š
+ * http://bailian.openjudge.cn/practice/4113/
+ *  
+ * æ ·ä¾‹è¾“å…¥
 2
 1 2
 5 YuanMingYuan 1295 BeiJingDaXueDongMen 887 ZhongGuanCun 900 HaiDianHuangZhuang 1063 RenMinDaXue
@@ -15,7 +15,7 @@ BeiJingDaXueDongMen RenMinDaXue
 7 JunShiBoWuGuan 1166 MuXiDi 1715 FuXingMen 1590 XiDan 1217 TianAnMenXi 925 TianAnMenDong 852 WangFuJing
 BeiJingDaXueDongMen TianAnMenDong
 
- ÑùÀıÊä³ö
+æ ·ä¾‹è¾“å‡º
 Case 1:
 3
 3
@@ -26,6 +26,7 @@ Case 2:
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+// Wrong Answer
 public class Main {
 
     public static void main(String[] args) {
@@ -80,7 +81,7 @@ public class Main {
             int[] lineCrossIndex = new int[2];
             int[] startCoordinate = new int[2];
             int[] endCoordinate = new int[2];
-            // ÕÒ½»²æµã
+            // æ‰¾äº¤å‰ç‚¹
             for (int i = 0; i < lines[0].stations.length; i++) {
                 lineCrossIndex[1] = lines[1].containsIndex(lines[0].stations[i]);
                 if (lineCrossIndex[1] >= 0) {
@@ -130,7 +131,7 @@ public class Main {
     
     private static int singleLineDistance(Line[] lines, String[] startEnd) {
         int distance = 0;
-        int foundFlag = 0; // 0:Î´½øÕ¾    1:½øÕ¾    2:³öÕ¾
+        int foundFlag = 0; // 0:æœªè¿›ç«™    1:è¿›ç«™    2:å‡ºç«™
         for (int i = 0; i < lines[0].stations.length; i++) {
             if (foundFlag == 1) {
                 distance += lines[0].distances[i - 1];
@@ -164,7 +165,7 @@ public class Main {
 }
 
 /**
- * µØÌúÏßÂ·
+ * åœ°é“çº¿è·¯
  */
 class Line {
     Station[] stations;
@@ -204,7 +205,7 @@ class Line {
 }
 
 /**
- * µØÌúÕ¾
+ * åœ°é“ç«™
  */
 class Station {
     String name;
