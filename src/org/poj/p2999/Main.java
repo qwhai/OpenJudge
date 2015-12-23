@@ -11,8 +11,10 @@ public class Main {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
+            @SuppressWarnings("unused")
             int m1 = Integer.parseInt(reader.readLine());
             String[] numberStrings1 = reader.readLine().split(" ");
+            @SuppressWarnings("unused")
             int m2 = Integer.parseInt(reader.readLine());
             String[] numberStrings2 = reader.readLine().split(" ");
             int[] nums1 = new int[numberStrings1.length];
@@ -45,7 +47,7 @@ public class Main {
         
         int maxLen = 0;
         int[] subMax = new int[nums1.length];
-        int[] path = new int[nums1.length]; // ¼ÇÂ¼ÐòÁÐÖÐ´ËÎ»ÖÃËù¶ÔÓ¦µÄ×îÒ»¸öÊýµÄIndex
+        int[] path = new int[nums1.length]; // ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Index
         for (int i = 0; i < subMax.length; i++) {
             subMax[i] = 1;
         }
@@ -53,8 +55,8 @@ public class Main {
             path[i] = i;
         }
         
-        int index = 0; // ÓÃÓÚ¼ÇÂ¼ÔÚÐòÁÐnums1ÖÐµÄ×î³¤×ÓÐòÁÐÖÐ×îºóÒ»¸öÊýµÄÏÂ±ê
-        int index2 = 0; // ÓÃÓÚ¼ÇÂ¼ÔÚ
+        int index = 0; // ï¿½ï¿½ï¿½Ú¼ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nums1ï¿½Ðµï¿½ï¿½î³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½
+        int index2 = 0; // ï¿½ï¿½ï¿½Ú¼ï¿½Â¼ï¿½ï¿½
         for (int i = 1; i < nums1.length; i++) {
             while (index2 < nums2.length) {
                 if (nums1[i] == nums2[index2]) {
@@ -77,7 +79,7 @@ public class Main {
             }
         }
         
-        // ¼ÆËã²¢´òÓ¡Â·¾¶
+        // ï¿½ï¿½ï¿½ã²¢ï¿½ï¿½Ó¡Â·ï¿½ï¿½
         int[] descNums = new int[maxLen];
         for (int i = 0; i < maxLen; i++) {
             descNums[i] = nums1[index];

@@ -12,8 +12,10 @@ public class Main0 {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
+            @SuppressWarnings("unused")
             int m1 = Integer.parseInt(reader.readLine());
             String[] numberStrings1 = reader.readLine().split(" ");
+            @SuppressWarnings("unused")
             int m2 = Integer.parseInt(reader.readLine());
             String[] numberStrings2 = reader.readLine().split(" ");
             int[] nums1 = new int[numberStrings1.length];

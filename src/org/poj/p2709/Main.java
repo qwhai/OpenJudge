@@ -33,6 +33,6 @@ public class Main {
         double result = getSumFactorial(n) + 1;
         DecimalFormat df = new DecimalFormat("0.0000000000");
         System.out.println(df.format(result) + "");
+        input.close();
     }
-
 }

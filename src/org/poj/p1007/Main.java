@@ -8,7 +8,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
         int m = input.nextInt();
-        String temp = input.nextLine();
         
         String[] dna = new String[m];
         for (int i = 0; i < m; i++) {
@@ -42,11 +41,12 @@ public class Main {
             }
         }
         
-        // ´òÓ¡
+        // ï¿½ï¿½Ó¡
         for (int i = 0; i < m; i++) {
             System.out.println(dna[mark[i]]);
         }
         
+        input.close();
     }
     
     private static int[] getInitInt(int m) {
