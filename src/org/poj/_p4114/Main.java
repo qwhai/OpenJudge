@@ -1,4 +1,4 @@
-package org.poj.p4114;
+package org.poj._p4114;
 
 /**
  * http://bailian.openjudge.cn/practice/4114/

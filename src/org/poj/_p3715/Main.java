@@ -1,4 +1,4 @@
-package org.poj.p3715;
+package org.poj._p3715;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,30 +7,30 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        // »ñµÃÔ±¹¤Êý¾Ý
+        // ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         ArrayList<Staff> staffs = getStaffs();
         
-        // ¼ÆËãÏà¸ôÌìÊý
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         calStaffWorkingDays(staffs);
         
-        // ´òÓ¡
+        // ï¿½ï¿½Ó¡
         printSortStaffs(staffs);
     }
 
     /**
-     * ¼ÆËãÈ«²¿Ô±¹¤µÄ¹¤×÷ÌìÊý
+     * ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private static void calStaffWorkingDays(ArrayList<Staff> staffs) {
         for (int i = 0; i < staffs.size(); i++) {
             staffs.get(i).setDays(calWorkingDays(staffs.get(i)));
         }
         
-        // ÅÅÐò
+        // ï¿½ï¿½ï¿½ï¿½
         sortStaffs(staffs);
     }
     
     /**
-     * ÅÅÐò
+     * ï¿½ï¿½ï¿½ï¿½
      */
     private static void sortStaffs(ArrayList<Staff> staffs) {
         // TODO
@@ -58,7 +58,7 @@ public class Main {
     }
     
     /**
-     * »ñµÃÈ«²¿ÊäÈëµÄÔ±¹¤ÐÅÏ¢
+     * ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ï¢
      */
     private static ArrayList<Staff> getStaffs() {
         ArrayList<Staff> staffs = new ArrayList<Staff>();
@@ -76,7 +76,7 @@ public class Main {
     }
     
     /**
-     * ¶ÔµÃµ½µÄÒ»´®×Ö·û´®½øÐÐ´¦Àí
+     * ï¿½ÔµÃµï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
      */
     private static Staff getStaff(String worker, int serial) {
         String[] info = worker.split(" ");
@@ -93,7 +93,7 @@ public class Main {
     }
     
     /**
-     * ¼ÆËãÔ±¹¤µÄ¹¤×÷ÌìÊý
+     * ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private static int calWorkingDays(Staff staff) {
         int days = 0;
@@ -120,7 +120,7 @@ public class Main {
     }
     
     /**
-     * ¼ÆËãµÃµ½µ±Ç°ÈÕÆÚÊÇµ±Ç°ÄêµÄµÚ¼¸Ìì
+     * ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½Ç°ï¿½ï¿½ÄµÚ¼ï¿½ï¿½ï¿½
      */
     private static int calDaysofCurrentYear(int year, int month, int day) {
         int[] daysOfMonth = getDaysofMonth(year);
@@ -134,7 +134,7 @@ public class Main {
     }
     
     /**
-     * ¸ù¾ÝÄê·Ý»ñµÃµ±Ç°ÄêµÄÃ¿ÔÂµÄÌìÊýÊý×é
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½Ãµï¿½Ç°ï¿½ï¿½ï¿½Ã¿ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private static int[] getDaysofMonth(int year) {
         int[] daysOfMonth = {29, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -148,14 +148,14 @@ public class Main {
     }
     
     /**
-     * ÅÐ¶ÏÊÇ·ñÊÇÈòÄê
+     * ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private static boolean isLeapYear(int year) {
         return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
     
     /**
-     * ´òÓ¡Ô±¹¤µÄ¹¤×÷ÌìÊý
+     * ï¿½ï¿½Ó¡Ô±ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private static void printSortStaffs(ArrayList<Staff> staffs) {
         for (int i = 0; i < staffs.size(); i++) {
@@ -164,7 +164,7 @@ public class Main {
     }
     
     /**
-     * ¶¨ÒåÒ»¸öÔ±¹¤ÄÚ²¿Àà£¬ÓÃÓÚ±£´æµ¥ÌõÔ±¹¤ÐÅÏ¢
+     * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ú²ï¿½ï¿½à£¬ï¿½ï¿½ï¿½Ú±ï¿½ï¿½æµ¥ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ï¢
      */
     private static class Staff {
         private String name;

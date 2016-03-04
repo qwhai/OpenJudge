@@ -1,4 +1,4 @@
-package org.poj.p4092;
+package org.poj._p4092;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -13,13 +13,13 @@ public class Main {
             while (n-- > 0) {
                 int m = Integer.parseInt(reader.readLine());
                 
-                // »ñµÃÊäÈëÊı¾İ
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 String[] dnas = new String[m];
                 for (int i = 0; i < m; i++) {
                     dnas[i] = reader.readLine();
                 }
                 
-                // ×Ö·û´®Æ¥Åä
+                // ï¿½Ö·ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½
                 String maxSame = getMaxSameSubString(dnas);
                 printSub(maxSame);
             }
@@ -28,7 +28,7 @@ public class Main {
     }
     
     /**
-     * ´òÓ¡×Ó´®
+     * ï¿½ï¿½Ó¡ï¿½Ó´ï¿½
      * @param sub
      */
     private static void printSub(String sub) {
@@ -77,14 +77,14 @@ public class Main {
     }
     
     /**
-     * »ñµÃÒ»¸ö×Ö·û´®µÄËùÓĞ×Ó´®
+     * ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó´ï¿½
      * @param s
      * @return
      */
     private static String[] getSubString(String s) {
         int count = getSubStringCount(s);
         String[] subs = new String[count];
-        // iÎª¿ªÊ¼Î»ÖÃ,jÎª½áÊøÎ»ÖÃ
+        // iÎªï¿½ï¿½Ê¼Î»ï¿½ï¿½,jÎªï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
         for (int i = 0, ct = 0; i < s.length(); i++) {
             for (int j = i + 1; j <= s.length(); j++) {
                 char[] sub = new char[j - i];
@@ -99,7 +99,7 @@ public class Main {
     }
     
     /**
-     * »ñµÃÒ»¸ö×Ö·û´®ÖĞ¹²ÓĞ¶àÉÙ¸ö×Ó´®
+     * ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ğ¹ï¿½ï¿½Ğ¶ï¿½ï¿½Ù¸ï¿½ï¿½Ó´ï¿½
      * @param s
      * @return
      */

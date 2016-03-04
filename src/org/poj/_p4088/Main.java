@@ -1,4 +1,4 @@
-package org.poj.p4088;
+package org.poj._p4088;
 
 import java.util.Scanner;
 

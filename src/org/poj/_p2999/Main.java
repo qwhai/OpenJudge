@@ -1,4 +1,4 @@
-package org.poj.p2999;
+package org.poj._p2999;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
