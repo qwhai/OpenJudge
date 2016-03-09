@@ -1,4 +1,4 @@
-package org.poj._p4103;
+package org.poj.p4103;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
