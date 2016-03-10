@@ -4,7 +4,10 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * <p></p>
+ * <p>
+ * 2255:重建二叉树
+ * http://bailian.openjudge.cn/practice/2255/
+ * </p>
  * Create Date: 2016年3月10日
  * Last Modify: 2016年3月10日
  * 
