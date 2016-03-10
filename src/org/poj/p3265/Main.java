@@ -1,4 +1,4 @@
-package org.poj._p3265;
+package org.poj.p3265;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
