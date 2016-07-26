@@ -10,4 +10,16 @@ package org.leetcode.leet76;
  * version: 0.0.1
  */
 public class Solution {
+
+    public static void main(String[] args) {
+        // TODO
+    }
+
+    /**
+     * S = "ADOBECODE BANC"
+     * T = "ABC"
+     */
+    public String minWindow(String s, String t) {
+        return null;
+    }
 }
